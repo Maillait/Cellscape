@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>CellScape</title>
+    <link rel="icon" type="image/x-icon" href="Cellfavicon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=.7, user-scalable=yes"
+    />
+  </head>
+
+  <body style="background-color: #d4d7d9">
+    <div style="background-color: rgba(211, 211, 211, 0.5); width: 400px">
+      <div class="slidecontainer" style="display: flex; flex-direction: row">
+        <p>Grid Size</p>
+        <input
+          type="range"
+          min="50"
+          max="400"
+          value="100"
+          class="slider"
+          id="squares"
+        />
+        <p id="value">100</p>
+      </div>
+
+      <div class="slidecontainer" style="display: flex; flex-direction: row">
+        <p>Automata selection</p>
+        <input type="range" min="0" max="7" value="0" class="slider" id="sim" />
+        <p id="simType">None</p>
+      </div>
+
+      <div class="slidecontainer" style="display: flex; flex-direction: row">
+        <p>Max Fps</p>
+        <input
+          type="range"
+          min="1"
+          max="250"
+          value="4"
+          class="slider"
+          id="fps"
+        />
+        <p id="fpsL">4</p>
+      </div>
+
+      <div><p id="fpv">Fps: 4</p></div>
+
+      <button onclick="Button()" id="b">Pls Select Automata</button>
+      <button onclick="cChange()">Change Background color</button>
+    </div>
+
+    <canvas
+      id="plot"
+      width="400"
+      height="400"
+      style="border: 1px solid black"
+    ></canvas>
+    <div style="display: flex; flex-direction: row">
+      <p id="data" style="padding: 5px"></p>
+      <p id="eData" style="padding: 5px"></p>
+    </div>
+    <div style="display: none">
+      <img id="cells" src="CellScape.png" />
+    </div>
+    <script src="CellularJS.js"></script>
+  </body>
+</html>
